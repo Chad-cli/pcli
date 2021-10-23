@@ -79,8 +79,15 @@ function INFO ()
     echo "!!for thumbnail, use a terminal emulator such as kitty that does support graphics protocol"
     echo -en "${green}use ./pcli to run the script${end}\n"
 }
+
 clear
 DEPS-CHECK
+
+if [[ -f "pcli" ]]
+then
+    echo -en "${green}use ./pcli to run the script${end}\n"
+    exit 69
+fi
 
 if [[ -f chad.jpg ]]
 then
